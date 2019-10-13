@@ -1,2 +1,39 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<searchInput></searchInput>
+<view class="cate_Container">
+    <!-- 左侧 -->
+        <scroll-view  scroll-y class="cate_Left">
+            <view
+            wx:for="{{cateLeftList}}"
+            wx:key="cat_id"
+            class="{{index === current ? 'clickStyle' : ''}}"
+            bindtap="handleChange"
+            data-index="{{index}}">{{item.cat_name}}</view>
+        </scroll-view>
+    <!-- 右侧 -->
+        <scroll-view scroll-top="{{scrolltop}}" scroll-y class="cate_Right">
+         <view 
+            wx:for="{{cateRightList}}"
+            wx:for-index="index1"
+            wx:for-item="item1"
+            wx:key="cat_id"
+            class="cate_block">
+                <view class="cate_titel">
+                    {{item1.cat_name}}
+                </view>
+                <view class="cate_list">
+                    <navigator
+                    wx:for="{{item1.children}}"
+                    wx:for-index="index2"
+                    wx:for-item="item2"
+                    wx:key="cat_id"
+                    url="/pages/goods_list/index?cat_id={{item2.cat_id}}">
+                        <image mode="widthFix" 
+                        src="{{item2.cat_icon}}" />
+                        <text>
+                            {{item2.cat_name}}
+                        </text>
+                    </navigator>
+                </view>
+        </view>
+        </scroll-view>
+</view>

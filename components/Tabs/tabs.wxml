@@ -1,0 +1,14 @@
+<view class="tabsContainer">
+    <view class="tabsTitle">
+        <view
+        wx:for="{{tabsData}}"
+        wx:key="id"
+        data-id="{{item.id}}" 
+        bindtap="handleID"
+        class="tabsItems {{item.active ? 'tabsStyle' : ''}}">{{item.title}}</view>
+    </view>
+    <veiw class="tansContent">
+        <slot></slot>
+    </veiw>
+</view>
+  

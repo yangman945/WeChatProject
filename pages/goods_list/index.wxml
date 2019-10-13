@@ -1,2 +1,28 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<searchInput></searchInput>
+<tabs 
+    tabsData="{{tabsItems}}"
+    bindgetid="handlegetId">
+    <block wx:if="{{tabsItems[0].active}}">
+        <view class="goodsList">
+            <navigator open-type="navigate" class="goodsListContainer"
+            wx:for="{{goodsList}}"
+            wx:key="{{cat_id}}"
+            url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <view class="goodsLeft">
+                    <image mode="widthFix" 
+                    src="{{item.goods_small_logo || 'http://img0.imgtn.bdimg.com/it/u=2381247408,1568314224&fm=26&gp=0.jpg' }}" />
+                </view>
+                <view class="goodsRight">
+                    <view class="goodsName">
+                        {{item.goods_name}}
+                    </view>
+                    <view class="goodsPrice">
+                        ￥{{item.goods_price}}
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </block>
+      <block wx:elif="{{tabsItems[1].active}}">2</block>
+      <block wx:elif="{{tabsItems[2].active}}">3</block>
+</tabs>

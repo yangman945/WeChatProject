@@ -1,1 +1,29 @@
-/* pages/index/index.wxss */
+.swiperContarnet swiper {
+  height: 340rpx;
+}
+.index_cate {
+  display: flex;
+}
+.index_cate navigator {
+  flex: 1;
+  padding: 30rpx;
+}
+.index_goodsFloor .goodsFloor {
+  padding: 0 10rpx;
+  overflow: hidden;
+}
+.index_goodsFloor .goodsFloor .floorContent navigator {
+  width: 33.33%;
+  float: left;
+  /* 后面四张图片高度为第一张图片的一般 */
+}
+.index_goodsFloor .goodsFloor .floorContent navigator:nth-last-child(-n+4) {
+  height: 207.08154506rpx;
+  padding-right: 4rpx;
+}
+.index_goodsFloor .goodsFloor .floorContent navigator:nth-last-child(-n+2) {
+  padding-top: 4rpx;
+}
+.index_goodsFloor .goodsFloor .floorContent navigator image {
+  height: 100%;
+}

@@ -1,0 +1,50 @@
+.cate_Container{
+    display: flex;
+    height: ~'calc(100vh - 90rpx)';
+    .cate_Left{
+        flex:1;
+        view{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            height: 70rpx;
+            border-bottom: 2rpx solid #ccc;
+            padding: 5rpx;
+        }
+        .clickStyle{
+            color:var(--themeColor);
+            border-left: 1rpx solid var(--themeColor)
+        }
+    }
+    .cate_Right{
+        flex:3;
+        .cate_block{
+            .cate_titel{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 80rpx;
+            font-size: 32rpx;
+            color: black;
+            background-color: #ccc;
+            }
+            .cate_list{
+                overflow: hidden;
+                navigator{
+                    float: left;
+                    width: 33.33%;
+                    padding: 20rpx;
+                    image{}
+                    text{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 28rpx;
+                        color: black;
+                    }
+                }
+            }
+        }
+        
+    }
+}

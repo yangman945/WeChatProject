@@ -1,0 +1,14 @@
+.tabsContainer .tabsTitle{
+    display: flex;
+    height: 60rpx;
+}
+.tabsContainer .tabsTitle .tabsItems{
+    flex: 1;
+    display: flex;
+    justify-content:center;
+    align-items:center
+}
+.tabsContainer .tabsStyle{
+    color:var(--themeColor);
+    border-bottom: 2rpx solid var(--themeColor);
+}

@@ -15,16 +15,16 @@
     "pages/pay/index" 
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "地主兄",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#000",
+    "color": "#efefef",
     "selectedColor": "#b30019",
-    "backgroundColor": "",
+    "backgroundColor": "#007acc",
     "position": "bottom",
     "borderStyle": "black",
     "list": [
